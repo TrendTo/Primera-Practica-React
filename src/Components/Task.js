@@ -11,9 +11,14 @@ class Task extends Component{
             {task.descripcion} -
             {task.done}
             <button>Edit</button>
-            <button>Remove</button>
+            <button style={rm}>Remove</button>
         </div>
     }
+}
+
+const rm = {
+    background: '#ee0000',
+    color: '#fff'
 }
 
 export default Task
