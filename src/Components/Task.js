@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import propTypes from 'prop-types'
 
 class Task extends Component{
 
     upd(){
         return {
             background : this.props.task.done ? 'green' : 'none',
-            color : this.props.task.done ? 'gray' : 'black'
+            color : this.props.task.done ? 'white' : 'black'
         }
     }
 
@@ -21,6 +22,10 @@ class Task extends Component{
             <button style={rm}>Remove</button>
         </div>
     }
+}
+
+Task.propTypes = {
+    task: propTypes.object.isRequired
 }
 
 const rm = {
