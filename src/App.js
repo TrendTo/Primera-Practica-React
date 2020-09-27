@@ -3,6 +3,7 @@ import './App.css';
 
 import tasks from './sample/tasks.json'
 import Tasks from './Components/Tasks'
+import TaskForm from './Components/TaskForm';
 
 class NewApp extends Component{
   
@@ -13,6 +14,7 @@ class NewApp extends Component{
   render(){
     return <div>
       <Tasks tasks={this.state.tasks}/>
+      <TaskForm/>
     </div>
   }
 }
