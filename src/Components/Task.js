@@ -18,8 +18,8 @@ class Task extends Component{
             {task.title} -
             {task.descripcion} -
             {task.done}
-            <button style={this.upd()}>Edit</button>
-            <button style={rm}>Remove</button>
+            <button style={this.upd()} onClick={this.props.updateTask.bind(this, task.id)}>Edit</button>
+            <button style={rm} onClick={this.props.deleteTask.bind(this, task.id)}>Remove</button>
         </div>
     }
 }

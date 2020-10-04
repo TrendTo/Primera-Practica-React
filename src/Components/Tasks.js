@@ -5,7 +5,7 @@ import Task from './Task'
 
 class Tasks extends Component{
     render(){
-        return this.props.tasks.map(e => <Task task={e} key={e.id}/>)
+        return this.props.tasks.map(e => <Task task={e} key={e.id} deleteTask={this.props.deleteTask} updateTask={this.props.updateTask}/>)
     }
 }
 
