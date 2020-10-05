@@ -4,6 +4,7 @@ import './App.css';
 import tasks from './sample/tasks.json'
 import Tasks from './Components/Tasks'
 import TaskForm from './Components/TaskForm';
+import Posts from './Components/Posts'
 
 class NewApp extends Component{
   
@@ -26,6 +27,7 @@ class NewApp extends Component{
     const newTask = this.state.tasks.filter( task => task.id !== id)
     this.setState({ tasks : newTask})
   }
+  
   updateTask = id => {
     const newTask = this.state.tasks.map( task => {
       if (task.id === id) {
@@ -40,6 +42,7 @@ class NewApp extends Component{
     return <div>
       <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} updateTask={this.updateTask}/>
       <TaskForm addTask={this.addTask}/>
+      <Posts/>
     </div>
   }
 }
